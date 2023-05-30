@@ -31,3 +31,4 @@
 
 - `git branch`: Enlista las ramas.
 - `git branch {nombre de rama nueva}`: Crear una nueva rama.
+- `git checkout {nombre de rama}`: Cambio de rama.
