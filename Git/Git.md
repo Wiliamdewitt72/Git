@@ -1,6 +1,6 @@
 # Git
 
-Para ver gráficamente como funciona 
+Para ver gráficamente como funcionan los comandos hay que ir [aquí](https://git-school.github.io/visualizing-git/#free).
 
 ## Comandos
 
@@ -38,7 +38,7 @@ Para ver gráficamente como funciona
 - `git rebase {nombre de rama}`: Reescribe el historial de una rama, aplicando los cambios directamente sobre otra rama (sobre la que se este al ejecutar el comando) para que parezca que los cambios se hicieron de forma continua.
 - `git log --graph`: Ver los cambios comportamiento de las ramas de forma gráfica.
 
-Cuando hay un conflicto entre ramas, lo que sucede es:
+Cuando hay un ***conflicto entre ramas***, lo que sucede es:
 
 - Si se usa `git merge`,Git creará un nuevo commit especial llamado "*commit de fusión*" que **contiene los cambios combinados de ambas ramas**, junto con los marcadores de conflicto que indican las áreas conflictivas del código.
 - Si se usa `git rebase`, Git **pausará el rebase cuando encuentre un conflicto y te mostrará las áreas conflictivas** en los archivos correspondientes. Hasta que todos los conflictos se resuelvan.
