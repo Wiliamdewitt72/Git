@@ -1,5 +1,7 @@
 # Git
 
+Para ver gráficamente como funciona 
+
 ## Comandos
 
 - `git init`: Iniciar repositorio.
@@ -32,4 +34,11 @@
 - `git branch`: Enlista las ramas.
 - `git branch {nombre de rama nueva}`: Crear una nueva rama.
 - `git checkout {nombre de rama}`: Cambio de rama.
-- `git merge {nomdre de rama}`: Fusiona las dos ramas 
+- `git merge {nomdre de rama}`: Fusiona las dos ramas. La rama del nombre en la rama en la que nos encontramos. Se **conserva** la rama que se fusiono.
+- `git rebase {nombre de rama}`: Reescribe el historial de una rama, aplicando los cambios directamente sobre otra rama (sobre la que se este al ejecutar el comando) para que parezca que los cambios se hicieron de forma continua.
+- `git log --graph`: Ver los cambios comportamiento de las ramas de forma gráfica.
+
+Cuando hay un conflicto entre ramas, lo que sucede es:
+
+- Si se usa `git merge` Git creará un nuevo commit especial llamado "*commit de fusión*" que contiene los cambios combinados de ambas ramas, junto con los marcadores de conflicto que indican las áreas conflictivas del código.
+- Si se usa `git rebase`,Git pausará el rebase cuando encuentre un conflicto y te mostrará las áreas conflictivas en los archivos correspondientes. Hasta que todos los conflictos se resuelvan.
