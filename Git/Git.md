@@ -40,5 +40,11 @@ Para ver gráficamente como funciona
 
 Cuando hay un conflicto entre ramas, lo que sucede es:
 
-- Si se usa `git merge` Git creará un nuevo commit especial llamado "*commit de fusión*" que contiene los cambios combinados de ambas ramas, junto con los marcadores de conflicto que indican las áreas conflictivas del código.
-- Si se usa `git rebase`,Git pausará el rebase cuando encuentre un conflicto y te mostrará las áreas conflictivas en los archivos correspondientes. Hasta que todos los conflictos se resuelvan.
+- Si se usa `git merge`,Git creará un nuevo commit especial llamado "*commit de fusión*" que **contiene los cambios combinados de ambas ramas**, junto con los marcadores de conflicto que indican las áreas conflictivas del código.
+- Si se usa `git rebase`, Git **pausará el rebase cuando encuentre un conflicto y te mostrará las áreas conflictivas** en los archivos correspondientes. Hasta que todos los conflictos se resuelvan.
+
+## Manejo de archivos
+
+- `git restore {nombre de archivo}`: Deshace los cambios realizados antes de que se pase a la etapa de *staged*. Es como un *Ctrl + z*.
+- `git restore --staged {nombre de archivo}`: Lo mismo que antes pero ahora el archivo esta en etapa *staged*.
+- `git revert {hash de commit}`: Revierte el commit ya realizado. Crea otro commit con la información que tenía el commit anterior al revertido.
